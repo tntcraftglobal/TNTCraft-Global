@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TNTCraft Global | Premium Design Operations</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- <link rel="icon" type="image/x-icon" href="./C:\Users\vaibh\OneDrive\Desktop\TNTCraft Global\favicon.ico"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+.heading-font {
+  font-family: 'Syne', sans-serif;
+}
+.premium-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.gradient-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-bg {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+}
+/* 3D 5-LEVEL PLANETARY ECOSYSTEM ORBITS */
+.solar-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  height: 750px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+}
+.sun-core {
+  position: absolute;
+  z-index: 50;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #1e1b4b 0%, #0f172a 100%);
+  border: 3px solid #6366f1;
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.system-orbit {
+  position: absolute;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  animation: rotateOrbit linear infinite;
+}
+.orb-1 { width: 240px; height: 240px; animation-duration: 18s; z-index: 40; }
+.orb-2 { width: 360px; height: 360px; animation-duration: 26s; z-index: 35; }
+.orb-3 { width: 480px; height: 480px; animation-duration: 34s; z-index: 30; }
+.orb-4 { width: 600px; height: 600px; animation-duration: 42s; z-index: 25; }
+.orb-5 { width: 720px; height: 720px; animation-duration: 50s; z-index: 20; }
+.planet-sphere {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f8fafc 60%, #e2e8f0 100%);
+  border-radius: 50%;
+  box-shadow: inset -8px -8px 16px rgba(0,0,0,0.06), 0 10px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+  animation: counterRotate linear infinite;
+}
+.orb-1 .p1 { border: 2.5px solid #6366f1; top: -20%; left: 50%; transform: translate(-50%, -50%); }
+.orb-2 .p2 { border: 2.5px solid #3b82f6; top: 50%; left: 100%; transform: translate(-50%, -50%); }
+.orb-3 .p3 { border: 2.5px solid #a855f7; bottom: -30%; left: 50%; transform: translate(-50%, 50%); }
+.orb-4 .p4 { border: 2.5px solid #ec4899; top: 50%; left: 0%; transform: translate(-50%, -50%); }
+.orb-5 .p5 { border: 2.5px solid #10b981; top: 10%; left: 15%; transform: translate(-50%, -50%); }
+@keyframes rotateOrbit { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes counterRotate { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+.orb-1 .planet-sphere { animation-duration: 10s; }
+.orb-2 .planet-sphere { animation-duration: 20s; }
+.orb-3 .planet-sphere { animation-duration: 34s; }
+.orb-4 .planet-sphere { animation-duration: 42s; }
+.orb-5 .planet-sphere { animation-duration: 50s; }
+.card-3d {
+  transform: perspective(800px) rotateX(10deg) rotateY(-2deg);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.card-3d:hover {
+  transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(-8px);
+  box-shadow: 0 25px 40px -10px rgba(0,0,0,0.12);
+}
+/* Minor addition: validation state styling for email fields (kept within existing color theme) */
+.input-valid {
+  border-color: #10b981 !important;
+}
+.input-invalid {
+  border-color: #ef4444 !important;
+}
+.field-error-msg {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ef4444;
+  margin-top: 2px;
+  display: none;
+}
+</style>
+</head>
+<body class="pt-20">
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#0f172a] border-b border-slate-800 py-4 shadow-xl">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+    <div class="flex flex-col">
+      <span class="heading-font text-2xl font-extrabold tracking-wider text-white flex items-center gap-2">
+        <i class="fa-solid fa-cubes text-indigo-400"></i> TNT<span class="gradient-text">Craft</span> Global
+      </span>
+      <span class="text-[10px] text-slate-400 tracking-widest uppercase font-semibold">Owned by Technative Technologies</span>
+    </div>
+    <div class="hidden md:flex items-center space-x-8 font-semibold text-sm text-slate-300 tracking-wide">
+      <a href="#" class="hover:text-white transition-colors">Home</a>
+      <a href="#services-mesh" class="hover:text-white transition-colors">Services</a>
+      <a href="#pricing" class="hover:text-white transition-colors">Pricing Tiers</a>
+      <a href="#requirement-form" class="hover:text-white transition-colors">Calculator</a>
+      <a href="portfolio.html" target="_blank" class="text-sky-400 hover:text-white transition-colors flex items-center gap-1"><i class="fa-solid fa-briefcase text-xs"></i> Portfolio</a>
+      <a href="#contact" class="px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-full font-bold hover:shadow-lg transition-all transform hover:-translate-y-0.5">Contact Us</a>
+    </div>
+    <button id="menu-btn" class="md:hidden text-white focus:outline-none text-2xl">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-[#0f172a] border-t border-slate-800 w-full px-6 py-6 absolute top-full left-0 flex flex-col space-y-4 shadow-2xl">
+    <div class="flex flex-col items-center justify-center text-center pb-4 border-b border-slate-800">
+      <i class="fa-solid fa-cubes text-4xl text-indigo-400 mb-2"></i>
+      <h4 class="heading-font text-xl font-black text-white tracking-wide">TNT Craft Global</h4>
+      <p class="text-[10px] text-slate-400 tracking-widest uppercase mt-0.5">Technative Technologies Enterprise</p>
+    </div>
+    <a href="#" class="mobile-link text-slate-300 text-center font-medium hover:text-white py-1 block">Home</a>
+    <a href="#services-mesh" class="mobile-link text-slate-300 text-center font-medium hover:text-white py-1 block">Services</a>
+    <a href="#pricing" class="mobile-link text-slate-300 text-center font-medium hover:text-white py-1 block">Pricing Tiers</a>
+    <a href="#requirement-form" class="mobile-link text-slate-300 text-center font-medium hover:text-white py-1 block">Calculator</a>
+    <a href="portfolio.html" target="_blank" class="mobile-link text-sky-400 text-center font-medium hover:text-white py-1 block">Portfolio</a>
+    <a href="#contact" class="w-full text-center py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl block font-bold">Contact Us</a>
+  </div>
+</nav>
+
+<header class="relative pt-20 pb-16 md:pt-28 md:pb-24 px-6 flex flex-col items-center text-center bg-slate-50 overflow-hidden">
+  <div class="absolute w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[120px] top-10 left-1/2 -translate-x-1/2 -z-10"></div>
+  <span class="px-4 py-1.5 rounded-full border border-indigo-100 bg-white text-indigo-600 text-xs uppercase tracking-widest font-bold mb-6 inline-block shadow-sm">
+    🚀 Premium Cross-Border Design Operations
+  </span>
+  <h1 class="heading-font text-4xl md:text-6xl font-extrabold tracking-tight max-w-5xl leading-tight text-slate-900">
+    We Craft High-End Digital Assets for <span class="gradient-text">Global Brands</span>
+  </h1>
+  <p class="text-slate-500 text-base md:text-xl max-w-3xl mt-6 font-normal leading-relaxed">
+    Eliminating structural cross-border operational overheads. Get world-class UI/UX, complex corporate branding, and high-performance social ad collateral delivered instantly.
+  </p>
+  <div class="mt-10 flex flex-col sm:flex-row gap-4">
+    <a href="#requirement-form" class="px-8 py-4 gradient-bg text-white font-bold rounded-full hover:shadow-xl transition-all hover:scale-105">Configure Pipeline & Rate</a>
+    <a href="#pricing" class="px-8 py-4 border border-slate-300 bg-white text-slate-700 font-bold rounded-full hover:bg-slate-50 transition-all flex items-center gap-2">View 5-Level Grid <i class="fa-solid fa-arrow-right text-sm"></i></a>
+  </div>
+</header>
+
+<section id="services-mesh" class="py-24 bg-white border-y border-slate-200 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 text-center mb-12">
+    <span class="text-xs uppercase font-mono tracking-widest text-indigo-600 font-bold block mb-2">// CORE OPERATIONS MESH</span>
+    <h2 class="heading-font text-3xl md:text-4xl font-black text-slate-900">Our Connected Service Ecosystem</h2>
+    <p class="text-slate-600 text-sm md:text-base max-w-3xl mx-auto mt-4 font-medium leading-relaxed">
+      A globally integrated asset pipeline engineered to scale design workflows seamlessly across borders. Connect your brand directly with synchronized modern engineering hubs built for maximum velocity and pixel-perfect clarity.
+    </p>
+  </div>
+  <div class="solar-wrapper scale-75 md:scale-95 lg:scale-100">
+    <div class="sun-core">
+      <h3 class="heading-font text-xs font-black text-white text-center tracking-wider">OUR<br><span class="text-sky-400">SERVICES</span></h3>
+      <i class="fa-solid fa-atom text-indigo-400 text-lg mt-1 animate-spin" style="animation-duration: 8s;"></i>
+    </div>
+    <div class="system-orbit orb-1">
+      <div class="planet-sphere p1">
+        <i class="fa-solid fa-bezier-curve text-indigo-600 text-lg mb-1"></i>
+        <span>Branding & Identity</span>
+      </div>
+    </div>
+    <div class="system-orbit orb-2">
+      <div class="planet-sphere p2">
+        <i class="fa-solid fa-palette text-blue-600 text-lg mb-1"></i>
+        <span>Graphic Design</span>
+      </div>
+    </div>
+    <div class="system-orbit orb-3">
+      <div class="planet-sphere p3">
+        <i class="fa-solid fa-share-nodes text-purple-600 text-lg mb-1"></i>
+        <span>Social Media Post</span>
+      </div>
+    </div>
+    <div class="system-orbit orb-4">
+      <div class="planet-sphere p4">
+        <i class="fa-solid fa-compass-drafting text-pink-600 text-lg mb-1"></i>
+        <span>UI/UX Design</span>
+      </div>
+    </div>
+    <div class="system-orbit orb-5">
+      <div class="planet-sphere p5">
+        <i class="fa-solid fa-code text-emerald-600 text-lg mb-1"></i>
+        <span>Web Development</span>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-5xl mx-auto px-6 mt-20 grid md:grid-cols-3 gap-8">
+    <div class="card-3d p-6 rounded-2xl bg-white border-2 border-indigo-500 shadow-lg shadow-indigo-500/5">
+      <div class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 text-xl font-bold mb-4">01</div>
+      <h4 class="heading-font font-bold text-lg text-slate-900 flex items-center gap-2">Corporate Authority</h4>
+      <p class="text-xs text-slate-500 mt-3 leading-relaxed">Our premium Branding and UI/UX blueprints transition your standard venture into an elite international brand asset line, increasing structural customer validation scores significantly.</p>
+    </div>
+    <div class="card-3d p-6 rounded-2xl bg-white border-2 border-blue-400 shadow-lg shadow-blue-400/5">
+      <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-500 text-xl font-bold mb-4">02</div>
+      <h4 class="heading-font font-bold text-lg text-slate-900 flex items-center gap-2">Performance Scale</h4>
+      <p class="text-xs text-slate-500 mt-3 leading-relaxed">High-performance graphics and customized corporate ad rollouts accelerate customer acquisition velocity, translating raw traffic spikes into measurable global conversions.</p>
+    </div>
+    <div class="card-3d p-6 rounded-2xl bg-white border-2 border-emerald-400 shadow-lg shadow-emerald-400/5">
+      <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-500 text-xl font-bold mb-4">03</div>
+      <h4 class="heading-font font-bold text-lg text-slate-900 flex items-center gap-2">Strategic Growth</h4>
+      <p class="text-xs text-slate-500 mt-3 leading-relaxed">Automate cross-border delivery flows using our standardized workflows. Manage intricate product configurations and engineering assets from a single centralized production hub.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="py-20 bg-slate-50">
+  <div class="text-center mb-10 max-w-3xl mx-auto px-6">
+    <span class="text-xs uppercase font-mono tracking-widest text-indigo-600 font-bold block mb-2">// LOCAL RATES INTERACTIVE MATRIX</span>
+    <h2 class="heading-font text-3xl md:text-4xl font-extrabold text-slate-900">Unified Country-Wise Pricing</h2>
+    <p class="text-slate-500 text-sm mt-2">Filter standard regional tiers below to instantly compute exact flat subscription values mapped directly across global corridors.</p>
+    <div class="mt-8 max-w-xs mx-auto text-left">
+      <label for="grid-country-picker" class="block text-xs font-black tracking-wider text-slate-500 uppercase mb-2 text-center">Select Your Country</label>
+      <div class="relative">
+        <select id="grid-country-picker" class="w-full bg-white border-2 border-indigo-100 rounded-xl px-4 py-3 text-slate-900 font-bold focus:outline-none focus:border-indigo-600 appearance-none shadow-sm cursor-pointer">
+          <option value="USD" data-symbol="$" data-factor="1" selected>🇺🇸 United States (USD)</option>
+          <option value="GBP" data-symbol="£" data-factor="0.78">🇬🇧 United Kingdom (GBP)</option>
+          <option value="EUR" data-symbol="€" data-factor="0.92">🇪🇺 Eurozone (EUR)</option>
+          <option value="KWD" data-symbol="KD" data-factor="0.31">🇰🇼 Kuwait (KWD)</option>
+          <option value="BHD" data-symbol="BD" data-factor="0.38">🇧🇭 Bahrain (BHD)</option>
+          <option value="OMR" data-symbol="RO" data-factor="0.39">🇴🇲 Oman (OMR)</option>
+          <option value="JOD" data-symbol="JD" data-factor="0.71">🇯🇴 Jordan (JOD)</option>
+          <option value="CHF" data-symbol="CHF" data-factor="0.89">🇨🇭 Switzerland (CHF)</option>
+          <option value="SGD" data-symbol="S$" data-factor="1.35">🇸🇬 Singapore (SGD)</option>
+          <option value="CAD" data-symbol="C$" data-factor="1.37">🇨🇦 Canada (CAD)</option>
+          <option value="AUD" data-symbol="A$" data-factor="1.51">🇦🇺 Australia (AUD)</option>
+          <option value="AED" data-symbol="AED" data-factor="3.67">🇦🇪 United Arab Emirates (AED)</option>
+          <option value="NOK" data-symbol="kr" data-factor="10.65">🇳🇴 Norway (NOK)</option>
+          <option value="SEK" data-symbol="kr" data-factor="10.52">🇸🇪 Sweden (SEK)</option>
+          <option value="DKK" data-symbol="kr" data-factor="6.88">🇩🇰 Denmark (DKK)</option>
+          <option value="ISK" data-symbol="kr" data-factor="139.20">🇮🇸 Iceland (ISK)</option>
+          <option value="SAR" data-symbol="SR" data-factor="3.75">🇸🇦 Saudi Arabia (SAR)</option>
+          <option value="QAR" data-symbol="QR" data-factor="3.64">🇶🇦 Qatar (QAR)</option>
+          <option value="HKD" data-symbol="HK$" data-factor="7.81">🇭🇰 Hong Kong (HKD)</option>
+          <option value="JPY" data-symbol="¥" data-factor="157.30">🇯🇵 Japan (JPY)</option>
+          <option value="KRW" data-symbol="₩" data-factor="1380.00">🇰🇷 South Korea (KRW)</option>
+          <option value="NZD" data-symbol="NZ$" data-factor="1.63">🇳🇿 New Zealand (NZD)</option>
+          <option value="IEP" data-symbol="€" data-factor="0.92">🇮🇪 Ireland (EUR)</option>
+          <option value="LUX" data-symbol="€" data-factor="0.92">🇱🇺 Luxembourg (EUR)</option>
+          <option value="INR" data-symbol="₹" data-factor="94.33">IN India (INR)</option>
+        </select>
+        <i class="fa-solid fa-earth-americas absolute right-4 top-1/2 -translate-y-1/2 text-indigo-600 pointer-events-none"></i>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-4">
+    <div class="premium-card p-5 rounded-2xl flex flex-col justify-between border-t-4 border-t-slate-400">
+      <div>
+        <span class="text-[10px] font-mono uppercase bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-bold">Level 01</span>
+        <h4 class="heading-font text-lg font-bold text-slate-900 mt-2">Basic Tier</h4>
+        <div class="mt-3 border-b border-slate-100 pb-3">
+          <span id="tier-l1-val" class="text-xl font-black text-slate-900 heading-font">$--</span>
+          <p class="text-[10px] text-slate-400 font-semibold mt-0.5">Flat Production Assets Line</p>
+        </div>
+        <div class="mt-4 space-y-3">
+          <span class="text-[10px] font-bold uppercase text-slate-400 tracking-wider block">Scope Of Quality:</span>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li><i class="fa-solid fa-circle-check text-indigo-600 mr-1.5"></i> All Core Design Actions</li>
+            <li><i class="fa-solid fa-circle-check text-indigo-600 mr-1.5"></i> Standard Asset Quality</li>
+            <li><i class="fa-solid fa-circle-check text-indigo-600 mr-1.5"></i> Clean Layout Frameworks</li>
+          </ul>
+        </div>
+      </div>
+      <a href="#requirement-form" class="w-full text-center py-2.5 mt-6 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl hover:bg-indigo-600 hover:text-white transition-colors block">Configure</a>
+    </div>
+    <div class="premium-card p-5 rounded-2xl flex flex-col justify-between border-t-4 border-t-blue-500">
+      <div>
+        <span class="text-[10px] font-mono uppercase bg-blue-50 text-blue-600 px-2 py-0.5 rounded font-bold">Level 02</span>
+        <h4 class="heading-font text-lg font-bold text-slate-900 mt-2">Advance Tier</h4>
+        <div class="mt-3 border-b border-slate-100 pb-3">
+          <span id="tier-l2-val" class="text-xl font-black text-slate-900 heading-font">$--</span>
+          <p class="text-[10px] text-slate-400 font-semibold mt-0.5">Intermediate Asset Line</p>
+        </div>
+        <div class="mt-4 space-y-3">
+          <span class="text-[10px] font-bold uppercase text-slate-400 tracking-wider block">Scope Of Quality:</span>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li><i class="fa-solid fa-circle-check text-blue-600 mr-1.5"></i> High Component Density</li>
+            <li><i class="fa-solid fa-circle-check text-blue-600 mr-1.5"></i> Raw Production Formats</li>
+            <li><i class="fa-solid fa-circle-check text-blue-600 mr-1.5"></i> Commercial Guardrails</li>
+          </ul>
+        </div>
+      </div>
+      <a href="#requirement-form" class="w-full text-center py-2.5 mt-6 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-colors block">Configure</a>
+    </div>
+    <div class="premium-card p-5 rounded-2xl flex flex-col justify-between border-2 border-indigo-600 relative">
+      <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-[9px] font-black uppercase px-2.5 py-0.5 rounded-full tracking-wider">Recommended</span>
+      <div>
+        <span class="text-[10px] font-mono uppercase bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded font-bold">Level 03</span>
+        <h4 class="heading-font text-lg font-bold text-slate-900 mt-2">Pro Tier</h4>
+        <div class="mt-3 border-b border-slate-100 pb-3">
+          <span id="tier-l3-val" class="text-xl font-black text-slate-900 heading-font">$--</span>
+          <p class="text-[10px] text-slate-400 font-semibold mt-0.5">Premium Executive Design</p>
+        </div>
+        <div class="mt-4 space-y-3">
+          <span class="text-[10px] font-bold uppercase text-slate-400 tracking-wider block">Scope Of Quality:</span>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li><i class="fa-solid fa-circle-check text-indigo-600 mr-1.5"></i> Cross-Industry Strategic R&D</li>
+            <li><i class="fa-solid fa-circle-check text-indigo-600 mr-1.5"></i> Complex Figma Structural Maps</li>
+            <li><i class="fa-solid fa-circle-check text-indigo-600 mr-1.5"></i> VIP Operations Pipeline</li>
+          </ul>
+        </div>
+      </div>
+      <a href="#requirement-form" class="w-full text-center py-2.5 mt-6 gradient-bg text-white text-xs font-bold rounded-xl shadow-md block">Configure</a>
+    </div>
+    <div class="premium-card p-5 rounded-2xl flex flex-col justify-between border-t-4 border-t-purple-500">
+      <div>
+        <span class="text-[10px] font-mono uppercase bg-purple-50 text-purple-600 px-2 py-0.5 rounded font-bold">Level 04</span>
+        <h4 class="heading-font text-lg font-bold text-slate-900 mt-2">Expert Tier</h4>
+        <div class="mt-3 border-b border-slate-100 pb-3">
+          <span id="tier-l4-val" class="text-xl font-black text-slate-900 heading-font">$--</span>
+          <p class="text-[10px] text-slate-400 font-semibold mt-0.5">High-Complexity Deliverables</p>
+        </div>
+        <div class="mt-4 space-y-3">
+          <span class="text-[10px] font-bold uppercase text-slate-400 tracking-wider block">Scope Of Quality:</span>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li><i class="fa-solid fa-circle-check text-purple-600 mr-1.5"></i> Enterprise Strategy Design</li>
+            <li><i class="fa-solid fa-circle-check text-purple-600 mr-1.5"></i> Supervised by Art Directors</li>
+            <li><i class="fa-solid fa-circle-check text-purple-600 mr-1.5"></i> Scale Prototype Systems</li>
+          </ul>
+        </div>
+      </div>
+      <a href="#requirement-form" class="w-full text-center py-2.5 mt-6 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl hover:bg-purple-600 hover:text-white transition-colors block">Configure</a>
+    </div>
+    <div class="premium-card p-5 rounded-2xl flex flex-col justify-between border-t-4 border-t-cyan-500">
+      <div>
+        <span class="text-[10px] font-mono uppercase bg-cyan-50 text-cyan-600 px-2 py-0.5 rounded font-bold">Level 05</span>
+        <h4 class="heading-font text-lg font-bold text-slate-900 mt-2">Elite Tier</h4>
+        <div class="mt-3 border-b border-slate-100 pb-3">
+          <span id="tier-l5-val" class="text-xl font-black text-slate-900 heading-font">$--</span>
+          <p class="text-[10px] text-slate-400 font-semibold mt-0.5">Bespoke Strategic Concept Art</p>
+        </div>
+        <div class="mt-4 space-y-3">
+          <span class="text-[10px] font-bold uppercase text-slate-400 tracking-wider block">Scope Of Quality:</span>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li><i class="fa-solid fa-circle-check text-cyan-600 mr-1.5"></i> Ultimate Engineering Framework</li>
+            <li><i class="fa-solid fa-circle-check text-cyan-600 mr-1.5"></i> Infinite Production Iterations</li>
+            <li><i class="fa-solid fa-bolt text-cyan-500 mr-1.5"></i> 24-Hour Urgent Priority SLA</li>
+          </ul>
+        </div>
+      </div>
+      <a href="#requirement-form" class="w-full text-center py-2.5 mt-6 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl hover:bg-cyan-600 hover:text-white transition-colors block">Configure</a>
+    </div>
+  </div>
+</section>
+
+<section id="requirement-form" class="py-20 px-6 max-w-4xl mx-auto relative">
+  <div class="premium-card rounded-3xl p-8 md:p-12 shadow-xl bg-white border border-slate-200">
+    <div class="text-center mb-10">
+      <h3 class="heading-font text-2xl md:text-3xl font-extrabold text-slate-900">Configure Your <span class="gradient-text">Design Pipeline</span></h3>
+      <p class="text-slate-500 text-sm mt-2">Select parameters to track unified regional target rates without any legal cross-border friction.</p>
+    </div>
+    <form id="pipeline-form" class="space-y-6" action="https://formsubmit.co/tntcraftglobal@gmail.com" method="POST">
+      <!-- FormSubmit configuration fields: routes all submissions straight to tntcraftglobal@gmail.com -->
+      <input type="hidden" name="_subject" value="New Design Pipeline Request - TNTCraft Global">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="true">
+      <!-- Honeypot anti-spam field: must stay hidden from real visitors; bots that fill it get silently blocked -->
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="flex flex-col space-y-2">
+          <label for="country-select" class="text-xs font-bold tracking-wider text-slate-700 uppercase">1. Select Target Country</label>
+          <div class="relative">
+            <select id="country-select" name="target_country" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 font-medium focus:outline-none focus:border-indigo-500 appearance-none transition-colors cursor-pointer">
+              <option value="USD" data-symbol="$" data-factor="1" data-dial="+1" selected>🇺🇸 United States (USD)</option>
+              <option value="GBP" data-symbol="£" data-factor="0.78" data-dial="+44">🇬🇧 United Kingdom (GBP)</option>
+              <option value="EUR" data-symbol="€" data-factor="0.92" data-dial="+49">🇪🇺 Eurozone (EUR)</option>
+              <option value="KWD" data-symbol="KD" data-factor="0.31" data-dial="+965">🇰🇼 Kuwait (KWD)</option>
+              <option value="BHD" data-symbol="BD" data-factor="0.38" data-dial="+973">🇧🇭 Bahrain (BHD)</option>
+              <option value="OMR" data-symbol="RO" data-factor="0.39" data-dial="+968">🇴🇲 Oman (OMR)</option>
+              <option value="JOD" data-symbol="JD" data-factor="0.71" data-dial="+962">🇯🇴 Jordan (JOD)</option>
+              <option value="CHF" data-symbol="CHF" data-factor="0.89" data-dial="+41">🇨🇭 Switzerland (CHF)</option>
+              <option value="SGD" data-symbol="S$" data-factor="1.35" data-dial="+65">🇸🇬 Singapore (SGD)</option>
+              <option value="CAD" data-symbol="C$" data-factor="1.37" data-dial="+1">🇨🇦 Canada (CAD)</option>
+              <option value="AUD" data-symbol="A$" data-factor="1.51" data-dial="+61">🇦🇺 Australia (AUD)</option>
+              <option value="AED" data-symbol="AED" data-factor="3.67" data-dial="+971">🇦🇪 United Arab Emirates (AED)</option>
+              <option value="NOK" data-symbol="kr" data-factor="10.65" data-dial="+47">🇳🇴 Norway (NOK)</option>
+              <option value="SEK" data-symbol="kr" data-factor="10.52" data-dial="+46">🇸🇪 Sweden (SEK)</option>
+              <option value="DKK" data-symbol="kr" data-factor="6.88" data-dial="+45">🇩🇰 Denmark (DKK)</option>
+              <option value="ISK" data-symbol="kr" data-factor="139.20" data-dial="+354">🇮🇸 Iceland (ISK)</option>
+              <option value="SAR" data-symbol="SR" data-factor="3.75" data-dial="+966">🇸🇦 Saudi Arabia (SAR)</option>
+              <option value="QAR" data-symbol="QR" data-factor="3.64" data-dial="+974">🇶🇦 Qatar (QAR)</option>
+              <option value="HKD" data-symbol="HK$" data-factor="7.81" data-dial="+852">🇭🇰 Hong Kong (HKD)</option>
+              <option value="JPY" data-symbol="¥" data-factor="157.30" data-dial="+81">🇯🇵 Japan (JPY)</option>
+              <option value="KRW" data-symbol="₩" data-factor="1380.00" data-dial="+82">🇰🇷 South Korea (KRW)</option>
+              <option value="NZD" data-symbol="NZ$" data-factor="1.63" data-dial="+64">🇳🇿 New Zealand (NZD)</option>
+              <option value="IEP" data-symbol="€" data-factor="0.92" data-dial="+353">🇮🇪 Ireland (EUR)</option>
+              <option value="LUX" data-symbol="€" data-factor="0.92" data-dial="+352">🇱🇺 Luxembourg (EUR)</option>
+              <option value="INR" data-symbol="₹" data-factor="94.33" data-dial="+91">IN India (INR)</option>
+            </select>
+            <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-xs"></i>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-2">
+          <label for="client_name" class="text-xs font-bold tracking-wider text-slate-700 uppercase">2. Corporate Entity / Full Name</label>
+          <input type="text" id="client_name" name="client_name" autocomplete="name" required placeholder="e.g. John Doe / Apex Inc." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-indigo-500 placeholder-slate-400 transition-colors">
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="flex flex-col space-y-2">
+          <label for="client_phone" class="text-xs font-bold tracking-wider text-slate-700 uppercase">3. Mobile Number</label>
+          <div class="flex gap-2">
+            <div class="relative w-28 flex-shrink-0">
+              <select id="phone-country-code" name="phone_country_code" class="w-full h-full bg-slate-50 border border-slate-200 rounded-xl pl-3 pr-6 py-3 text-slate-900 font-semibold focus:outline-none focus:border-indigo-500 appearance-none transition-colors cursor-pointer text-sm">
+                <option value="+1" data-country="United States" selected>🇺🇸 +1</option>
+                <option value="+44" data-country="United Kingdom">🇬🇧 +44</option>
+                <option value="+49" data-country="Eurozone">🇪🇺 +49</option>
+                <option value="+91" data-country="India">IN +91</option>
+                <option value="+965" data-country="Kuwait">🇰🇼 +965</option>
+                <option value="+973" data-country="Bahrain">🇧🇭 +973</option>
+                <option value="+968" data-country="Oman">🇴🇲 +968</option>
+                <option value="+962" data-country="Jordan">🇯🇴 +962</option>
+                <option value="+41" data-country="Switzerland">🇨🇭 +41</option>
+                <option value="+65" data-country="Singapore">🇸🇬 +65</option>
+                <option value="+1" data-country="Canada">🇨🇦 +1</option>
+                <option value="+61" data-country="Australia">🇦🇺 +61</option>
+                <option value="+971" data-country="United Arab Emirates">🇦🇪 +971</option>
+                <option value="+47" data-country="Norway">🇳🇴 +47</option>
+                <option value="+46" data-country="Sweden">🇸🇪 +46</option>
+                <option value="+45" data-country="Denmark">🇩🇰 +45</option>
+                <option value="+354" data-country="Iceland">🇮🇸 +354</option>
+                <option value="+966" data-country="Saudi Arabia">🇸🇦 +966</option>
+                <option value="+974" data-country="Qatar">🇶🇦 +974</option>
+                <option value="+852" data-country="Hong Kong">🇭🇰 +852</option>
+                <option value="+81" data-country="Japan">🇯🇵 +81</option>
+                <option value="+82" data-country="South Korea">🇰🇷 +82</option>
+                <option value="+64" data-country="New Zealand">🇳🇿 +64</option>
+                <option value="+353" data-country="Ireland">🇮🇪 +353</option>
+                <option value="+352" data-country="Luxembourg">🇱🇺 +352</option>
+              </select>
+              <i class="fa-solid fa-chevron-down absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none text-[10px]"></i>
+            </div>
+            <input type="tel" id="client_phone" name="client_phone" autocomplete="tel" required placeholder="(555) 000-0000" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-indigo-500 placeholder-slate-400 transition-colors">
+          </div>
+        </div>
+        <div class="flex flex-col space-y-2">
+          <label for="client_email" class="text-xs font-bold tracking-wider text-slate-700 uppercase">4. Corporate Email ID</label>
+          <input type="email" id="client_email" name="client_email" autocomplete="email" required placeholder="john@company.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-indigo-500 placeholder-slate-400 transition-colors">
+          <span id="client-email-error" class="field-error-msg">Please enter a valid email address (e.g. name@company.com).</span>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <span class="text-xs font-bold tracking-wider text-slate-700 uppercase">5. Select Required Production Services</span>
+        <div class="grid md:grid-cols-2 gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200">
+          <label class="flex items-start space-x-3 p-2 hover:bg-white rounded-xl transition-all cursor-pointer border border-transparent hover:border-slate-200">
+            <input type="radio" name="selected_service" value="branding" class="service-radio mt-1 accent-indigo-600" checked>
+            <div>
+              <span class="text-sm font-bold block text-slate-900">1. Branding & Identity Design</span>
+              <span class="text-xs text-slate-500 block">Logo blueprints, guidelines, vectors.</span>
+            </div>
+          </label>
+          <label class="flex items-start space-x-3 p-2 hover:bg-white rounded-xl transition-all cursor-pointer border border-transparent hover:border-slate-200">
+            <input type="radio" name="selected_service" value="graphic" class="service-radio mt-1 accent-indigo-600">
+            <div>
+              <span class="text-sm font-bold block text-slate-900">2. Graphic Design</span>
+              <span class="text-xs text-slate-500 block">Brochures, core vector prints, packaging layouts.</span>
+            </div>
+          </label>
+          <label class="flex items-start space-x-3 p-2 hover:bg-white rounded-xl transition-all cursor-pointer border border-transparent hover:border-slate-200">
+            <input type="radio" name="selected_service" value="social" class="service-radio mt-1 accent-indigo-600">
+            <div>
+              <span class="text-sm font-bold block text-slate-900">3. Social Media Post Design</span>
+              <span class="text-xs text-slate-500 block">High-conversion banners, carousels, campaign grids.</span>
+            </div>
+          </label>
+          <label class="flex items-start space-x-3 p-2 hover:bg-white rounded-xl transition-all cursor-pointer border border-transparent hover:border-slate-200">
+            <input type="radio" name="selected_service" value="uiux" class="service-radio mt-1 accent-indigo-600">
+            <div>
+              <span class="text-sm font-bold block text-slate-900">4. UI/UX Design</span>
+              <span class="text-xs text-slate-500 block">Premium responsive Figma frameworks & wireframes.</span>
+            </div>
+          </label>
+          <label class="flex items-start space-x-3 p-2 bg-emerald-50/50 rounded-xl transition-all cursor-pointer border border-emerald-200 md:col-span-2">
+            <input type="radio" name="selected_service" value="webdev" class="service-radio mt-1 accent-emerald-600">
+            <div>
+              <span class="text-sm font-bold block text-emerald-900">5. Web Development (Custom Architecture Only)</span>
+              <span class="text-xs text-emerald-600 block">Pricing parameters are evaluated manually. Selection forwards a priority link to tech engineering.</span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div id="calculator-panel" class="space-y-6 p-5 rounded-2xl border border-indigo-100 bg-indigo-50/30 transition-all duration-300">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex flex-col space-y-2">
+            <label for="asset-quantity" class="text-xs font-bold tracking-wider text-indigo-700 uppercase">Quantity (Number of Assets)</label>
+            <input type="number" id="asset-quantity" name="asset_quantity" min="1" value="1" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-900 font-bold focus:outline-none focus:border-indigo-500">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <label for="ladder-level" class="text-xs font-bold tracking-wider text-indigo-700 uppercase">Select Target Tier Level</label>
+            <div class="relative">
+              <select id="ladder-level" name="ladder_level" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-900 font-semibold focus:outline-none focus:border-indigo-500 appearance-none cursor-pointer">
+                <option value="0">Level 1: Basic Operational Deliverables ($36)</option>
+                <option value="1">Level 2: Advance Core Deliverables ($60)</option>
+                <option value="2">Level 3: Pro Standard System Assets ($96)</option>
+                <option value="3">Level 4: Expert Enterprise Engineering ($120)</option>
+                <option value="4">Level 5: Elite Supreme Complex Layouts ($180)</option>
+              </select>
+              <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-indigo-600 pointer-events-none text-xs"></i>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center p-4 bg-white rounded-xl border border-slate-100 gap-4">
+          <span class="text-xs font-bold text-slate-500 uppercase">Dynamic Cost Output Matrix:</span>
+          <div id="dynamic-price-output" class="text-xl md:text-2xl font-black text-indigo-600 font-mono tracking-tight text-right">$--</div>
+        </div>
+      </div>
+      <div id="webdev-custom-alert" class="hidden p-5 rounded-2xl border border-emerald-200 bg-emerald-50 text-emerald-800 text-sm font-semibold flex items-center gap-3">
+        <i class="fa-solid fa-circle-info text-xl text-emerald-600"></i>
+        <span>Web development cost architecture is custom handled. Our enterprise desk will trace your operational metrics and send custom quotation layout within 4 hours.</span>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <label for="strategic_scope" class="text-xs font-bold tracking-wider text-slate-700 uppercase">6. Strategic Requirements & Asset Scope</label>
+        <textarea id="strategic_scope" name="strategic_scope" required rows="4" placeholder="Detail your operational scope, target branding notes, and functional goals..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-indigo-500 placeholder-slate-400 transition-colors"></textarea>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <label for="reference_url" class="text-xs font-bold tracking-wider text-slate-700 uppercase">7. Asset References / File Links (Google Drive / Figma)</label>
+        <div class="relative">
+          <input type="url" id="reference_url" name="reference_url" placeholder="Paste your Google Drive, Figma, or Dropbox source folder link" class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-11 pr-4 py-3 text-slate-900 focus:outline-none focus:border-indigo-500 placeholder-slate-400 transition-colors">
+          <i class="fa-solid fa-link absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+        </div>
+      </div>
+      <input type="hidden" id="final_pricing_hidden" name="final_pricing" value="$--">
+      <button type="submit" id="submit-btn" class="w-full py-4 gradient-bg text-white rounded-xl font-bold tracking-wider uppercase transition-all shadow-lg hover:opacity-90 transform hover:-translate-y-0.5 cursor-pointer">
+        <i class="fa-solid fa-paper-plane mr-2 text-sm"></i> Submit Pipeline Requirement
+      </button>
+    </form>
+    <p id="form-response" class="mt-4 text-center text-sm font-bold hidden"></p>
+  </div>
+</section>
+
+<section id="core-team" class="py-24 bg-[#0f172a] text-white border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+    <span class="text-xs uppercase font-mono tracking-widest text-indigo-400 font-bold block mb-2">// THE BRAIN TRUST</span>
+    <h2 class="heading-font text-3xl md:text-5xl font-black ">Meet Our Core Leadership Team</h2>
+    <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto mt-4 font-medium leading-relaxed">
+      Engineered for maximum scale and absolute delivery, driving multi-channel cross-border creative ecosystems.
+    </p>
+  </div>
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-2xl relative overflow-hidden group">
+      <div class="absolute inset-0 bg-gradient-to-b from-indigo-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-indigo-500 shadow-xl mb-6 bg-slate-800 flex items-center justify-center">
+        <img src="images/tntcraftlogo.jpg.jpeg" alt="Vaibhav" class="w-full h-full object-cover">
+      </div>
+      <h4 class="heading-font text-xl font-extrabold text-white">Vaibhav Kumar</h4>
+      <p class="text-indigo-400 text-xs font-mono tracking-widest uppercase mt-1">Full-Stack Developer & Designer</br>Founder & CEO </p>
+      <p class="text-slate-400 text-sm mt-4 leading-relaxed font-normal">
+        Directing strategic global expansion frameworks and orchestrating high-velocity enterprise pipeline assets.
+      </p>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-2xl relative overflow-hidden group">
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl mb-6 bg-slate-800 flex items-center justify-center">
+        <img src="images/tntcraftlogo.jpg.jpeg" alt="Aman Preet Kaur" class="w-full h-full object-cover">
+      </div>
+      <h4 class="heading-font text-xl font-extrabold text-white">Aman Preet Kaur</h4>
+      <p class="text-blue-400 text-xs font-mono tracking-widest uppercase mt-1">Senior Full-Stack Developer</p>
+      <p class="text-slate-400 text-sm mt-4 leading-relaxed font-normal">
+        Architecting automated continuous integration flows and scalable micro-service structures for worldwide distribution.
+      </p>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-2xl relative overflow-hidden group">
+      <div class="absolute inset-0 bg-gradient-to-b from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-purple-500 shadow-xl mb-6 bg-slate-800 flex items-center justify-center">
+        <img src="images/tntcraftlogo.jpg.jpeg" alt="Omprakash" class="w-full h-full object-cover">
+      </div>
+      <h4 class="heading-font text-xl font-extrabold text-white">Omprakash</h4>
+      <p class="text-purple-400 text-xs font-mono tracking-widest uppercase mt-1">Senior Product Designer</p>
+      <p class="text-slate-400 text-sm mt-4 leading-relaxed font-normal">
+        Synthesizing raw corporate identity metrics into multi-layered semantic design languages and clean pixel frameworks.
+      </p>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-2xl relative overflow-hidden group">
+      <div class="absolute inset-0 bg-gradient-to-b from-indigo-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-indigo-500 shadow-xl mb-6 bg-slate-800 flex items-center justify-center">
+        <img src="images/tntcraftlogo.jpg.jpeg" alt="Rehnuma" class="w-full h-full object-cover">
+      </div>
+      <h4 class="heading-font text-xl font-extrabold text-white">Rehnuma Idrisi</h4>
+      <p class="text-blue-400 text-xs font-mono tracking-widest uppercase mt-1">Product Designer</p>
+      <p class="text-slate-400 text-sm mt-4 leading-relaxed font-normal">
+        Designing the future of our product with a perfect blend of user-first empathy and stunning visuals.
+      </p>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-2xl relative overflow-hidden group">
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl mb-6 bg-slate-800 flex items-center justify-center">
+        <img src="images/tntcraftlogo.jpg.jpeg" alt="Zaid" class="w-full h-full object-cover">
+      </div>
+      <h4 class="heading-font text-xl font-extrabold text-white">Zaid </h4>
+      <p class="text-blue-400 text-xs font-mono tracking-widest uppercase mt-1">Web Developer</p>
+      <p class="text-slate-400 text-sm mt-4 leading-relaxed font-normal">
+        Turning complex wireframes into clean, scalable code and building robust, high-performance web applications.
+      </p>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-2xl relative overflow-hidden group">
+      <div class="absolute inset-0 bg-gradient-to-b from-purple-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-purple-500 shadow-xl mb-6 bg-slate-800 flex items-center justify-center">
+        <img src="images/tntcraftlogo.jpg.jpeg" alt="Jasleen" class="w-full h-full object-cover">
+      </div>
+      <h4 class="heading-font text-xl font-extrabold text-white">Jasleen Kaur</h4>
+      <p class="text-purple-400 text-xs font-mono tracking-widest uppercase mt-1">Product Designer</p>
+      <p class="text-slate-400 text-sm mt-4 leading-relaxed font-normal">
+        Bridging the gap between user needs and business goals through seamless, human-centric design.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-20 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 border-t border-slate-200 bg-white">
+  <div class="premium-card p-8 rounded-3xl bg-slate-50">
+    <h4 class="heading-font text-2xl font-bold text-slate-900 mb-6">Drop a Quick Line</h4>
+    <form class="space-y-4" id="quick-contact-form" action="https://formsubmit.co/tntcraftglobal@gmail.com" method="POST">
+      <!-- FormSubmit configuration fields: routes all submissions straight to tntcraftglobal@gmail.com -->
+      <input type="hidden" name="_subject" value="New Quick Contact Message - TNTCraft Global">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="true">
+      <!-- Honeypot anti-spam field: must stay hidden from real visitors; bots that fill it get silently blocked -->
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div>
+        <label for="quick-name" class="sr-only">Your Name</label>
+        <input type="text" id="quick-name" name="name" autocomplete="name" required placeholder="Your Name" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-indigo-500 text-sm">
+      </div>
+      <div>
+        <label for="quick-email" class="sr-only">Your Email Address</label>
+        <input type="email" id="quick-email" name="email" autocomplete="email" required placeholder="Your Email Address" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-indigo-500 text-sm">
+        <span id="quick-email-error" class="field-error-msg">Please enter a valid email address.</span>
+      </div>
+      <div>
+        <label for="quick-message" class="sr-only">Your Quick Message</label>
+        <textarea id="quick-message" name="message" required rows="4" placeholder="Your Quick Message..." class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-indigo-500 text-sm"></textarea>
+      </div>
+      <button type="submit" class="px-6 py-3 gradient-bg text-white rounded-xl font-bold tracking-wide text-xs uppercase shadow-md cursor-pointer">Dispatch Message</button>
+    </form>
+    <p id="quick-response" class="mt-2 text-sm font-bold text-green-600 hidden"></p>
+  </div>
+  <div class="flex flex-col justify-between">
+    <div class="space-y-4">
+      <span class="text-xs uppercase font-mono tracking-widest text-indigo-600 font-bold block">// OPERATIONS DESK</span>
+      <h3 class="heading-font text-2xl md:text-4xl font-extrabold text-slate-900">Our Strategic Hub</h3>
+      <p class="text-slate-500 text-sm">Processing cross-border asset engineering requests 24/7/365 inside corporate jurisdictions safely.</p>
+      <div class="text-sm space-y-3 text-slate-700 font-medium">
+        <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-indigo-600 mt-1"></i> Sunlight Colony 1, Ashram, Maharani Bagh, New Delhi - 110014, India</p>
+        <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-indigo-600"></i> tntcraftglobal@gmail.com</p>
+      </div>
+    </div>
+    <div class="w-full h-52 rounded-2xl overflow-hidden border border-slate-200 mt-6 shadow-inner">
+      <iframe class="w-full h-full border-0 grayscale opacity-80" src="https://www.openstreetmap.org/export/embed.html?bbox=77.2600%2C28.5700%2C77.2750%2C28.5850&amp;layer=mapnik&amp;marker=28.5776%2C77.2678" allowfullscreen="" loading="lazy" title="TNTCraft Global Office Location"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-slate-900 text-slate-400 pt-16 pb-8 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-10 border-b border-slate-800 pb-12 mb-8">
+    <div class="flex flex-col space-y-4">
+      <h5 class="heading-font text-sm font-bold uppercase text-white tracking-wider">Company</h5>
+      <ul class="text-xs space-y-2.5">
+        <li><a href="#" class="hover:text-white transition-colors">About Us Framework</a></li>
+        <li><a href="legal.html?tab=terms" target="_blank" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+        <li><a href="legal.html?tab=privacy" target="_blank" class="hover:text-white transition-colors">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="flex flex-col space-y-4 col-span-2 md:col-span-1">
+      <h5 class="heading-font text-sm font-bold uppercase text-white tracking-wider">Core Services</h5>
+      <ul class="text-xs space-y-2.5">
+        <li><a href="#services-mesh" class="hover:text-white transition-colors">Branding & Identity Design</a></li>
+        <li><a href="#services-mesh" class="hover:text-white transition-colors">Graphic Design</a></li>
+        <li><a href="#services-mesh" class="hover:text-white transition-colors">Social Media Post Design</a></li>
+        <li><a href="#services-mesh" class="hover:text-white transition-colors">UI/UX Design</a></li>
+        <li><a href="#services-mesh" class="hover:text-white transition-colors">Web Development</a></li>
+      </ul>
+    </div>
+    <div class="flex flex-col space-y-4 col-span-2 md:col-span-1">
+      <h5 class="heading-font text-sm font-bold uppercase text-white tracking-wider">Operations Security</h5>
+      <p class="text-xs text-slate-400 leading-relaxed">Secured via premium Hostinger Architecture and Enterprise-Grade SSL protection parameters.</p>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-[11px] text-slate-500 space-y-3 md:space-y-0 tracking-wide font-mono">
+    <p>© 2026 TNTCraft Global. All structural operational asset configurations reserved.</p>
+    <p class="uppercase">TNTCraft Global is a wholly-owned operating division of Technative Technologies.</p>
+  </div>
+</footer>
+
+<script>
+// Mobile Drawer Controller Toggle Action
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+if(menuBtn) {
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+}
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+  });
+});
+
+// 5 FIXED LEVEL PRICE TAG VALUES DEFINED ABSOLUTELY IN USD MAPPED PRECISELY
+const USD_BASE_RATES = [36, 60, 96, 120, 180];
+
+// Dynamic Elements DOM Mapping
+const gridCountryPicker = document.getElementById('grid-country-picker');
+const tierL1 = document.getElementById('tier-l1-val');
+const tierL2 = document.getElementById('tier-l2-val');
+const tierL3 = document.getElementById('tier-l3-val');
+const tierL4 = document.getElementById('tier-l4-val');
+const tierL5 = document.getElementById('tier-l5-val');
+
+// Update Section 3 Pricing Cards with Precise Multi-Currency conversions Mapped in Realtime
+function updatePricingGridCards() {
+  const selectedOpt = gridCountryPicker.options[gridCountryPicker.selectedIndex];
+  const symbol = selectedOpt.getAttribute('data-symbol') || "$";
+  const factor = parseFloat(selectedOpt.getAttribute('data-factor') || "1");
+  const currencyCode = selectedOpt.value;
+
+  // Render calculations perfectly using dynamic global pricing indexes
+  tierL1.innerText = `${symbol}${Math.round(USD_BASE_RATES[0] * factor)} ${currencyCode}`;
+  tierL2.innerText = `${symbol}${Math.round(USD_BASE_RATES[1] * factor)} ${currencyCode}`;
+  tierL3.innerText = `${symbol}${Math.round(USD_BASE_RATES[2] * factor)} ${currencyCode}`;
+  tierL4.innerText = `${symbol}${Math.round(USD_BASE_RATES[3] * factor)} ${currencyCode}`;
+  tierL5.innerText = `${symbol}${Math.round(USD_BASE_RATES[4] * factor)} ${currencyCode}`;
+}
+gridCountryPicker.addEventListener('change', updatePricingGridCards);
+
+// Section 4 Pipeline Calculator Pricing Configuration Engine Logic
+const countrySelect = document.getElementById('country-select');
+const ladderLevel = document.getElementById('ladder-level');
+const assetQuantity = document.getElementById('asset-quantity');
+const dynamicPriceOutput = document.getElementById('dynamic-price-output');
+const calculatorPanel = document.getElementById('calculator-panel');
+const webdevCustomAlert = document.getElementById('webdev-custom-alert');
+const serviceRadios = document.querySelectorAll('.service-radio');
+const finalPricingHidden = document.getElementById('final_pricing_hidden');
+
+// NEW: Phone country-code selector kept in sync with the Target Country dropdown
+const phoneCountryCode = document.getElementById('phone-country-code');
+countrySelect.addEventListener('change', () => {
+  const activeOpt = countrySelect.options[countrySelect.selectedIndex];
+  const dial = activeOpt.getAttribute('data-dial');
+  if (dial) phoneCountryCode.value = dial;
+});
+
+function runDynamicCalculation() {
+  let selectedService = "branding";
+  serviceRadios.forEach(radio => {
+    if(radio.checked) selectedService = radio.value;
+  });
+
+  if(selectedService === 'webdev') {
+    calculatorPanel.classList.add('hidden');
+    webdevCustomAlert.classList.remove('hidden');
+    if (finalPricingHidden) finalPricingHidden.value = "Custom Quotation (Web Development)";
+    return;
+  } else {
+    calculatorPanel.classList.remove('hidden');
+    webdevCustomAlert.classList.add('hidden');
+  }
+
+  const activeCountryOpt = countrySelect.options[countrySelect.selectedIndex];
+  const symbol = activeCountryOpt.getAttribute('data-symbol') || "$";
+  const factor = parseFloat(activeCountryOpt.getAttribute('data-factor') || "1");
+  const levelIndex = parseInt(ladderLevel.value) || 0;
+  const qty = parseInt(assetQuantity.value) || 1;
+
+  // Calculate base values in native absolute USD tracking anchors
+  const baseUsdTotal = USD_BASE_RATES[levelIndex] * qty;
+  const localCurrencyVal = Math.round(baseUsdTotal * factor);
+
+  // Formats view neatly preventing dual loops when currency matches standard USD native anchors
+  if (activeCountryOpt.value === "USD") {
+    dynamicPriceOutput.innerText = `$${baseUsdTotal}.00 USD Total`;
+  } else {
+    dynamicPriceOutput.innerText = `${symbol}${localCurrencyVal} ${activeCountryOpt.value} ($${baseUsdTotal}.00 USD)`;
+  }
+  if (finalPricingHidden) finalPricingHidden.value = dynamicPriceOutput.innerText;
+}
+countrySelect.addEventListener('change', runDynamicCalculation);
+ladderLevel.addEventListener('change', runDynamicCalculation);
+assetQuantity.addEventListener('input', runDynamicCalculation);
+serviceRadios.forEach(radio => radio.addEventListener('change', runDynamicCalculation));
+
+// Sync Country Select Dropdowns mutually across Section 3 and 4 smoothly
+gridCountryPicker.addEventListener('change', () => {
+  countrySelect.value = gridCountryPicker.value;
+  runDynamicCalculation();
+});
+countrySelect.addEventListener('change', () => {
+  gridCountryPicker.value = countrySelect.value;
+  updatePricingGridCards();
+});
+
+// ===== Email Validation Helper (used for both forms) =====
+// Simple, robust RFC-5322-style check: local@domain.tld
+function isValidEmail(value) {
+  const pattern = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+  return pattern.test(value.trim());
+}
+
+function bindEmailValidation(inputEl, errorEl) {
+  if (!inputEl) return;
+  function validate() {
+    const val = inputEl.value.trim();
+    if (val === "") {
+      inputEl.classList.remove('input-valid', 'input-invalid');
+      errorEl.style.display = "none";
+      return true;
+    }
+    if (isValidEmail(val)) {
+      inputEl.classList.remove('input-invalid');
+      inputEl.classList.add('input-valid');
+      errorEl.style.display = "none";
+      return true;
+    } else {
+      inputEl.classList.remove('input-valid');
+      inputEl.classList.add('input-invalid');
+      errorEl.style.display = "block";
+      return false;
+    }
+  }
+  inputEl.addEventListener('input', validate);
+  inputEl.addEventListener('blur', validate);
+  return validate;
+}
+
+const clientEmailInput = document.getElementById('client_email');
+const clientEmailError = document.getElementById('client-email-error');
+const validateClientEmail = bindEmailValidation(clientEmailInput, clientEmailError);
+
+const quickEmailInput = document.getElementById('quick-email');
+const quickEmailError = document.getElementById('quick-email-error');
+const validateQuickEmail = bindEmailValidation(quickEmailInput, quickEmailError);
+
+// 🔗 BACKEND INTEGRATION CODE (Sends all form submissions directly to tntcraftglobal@gmail.com via FormSubmit)
+// Dedicated AJAX endpoint (returns JSON + supports background fetch) — different from the form's
+// plain "action" URL, which is only used as a fallback if JavaScript is disabled.
+const FORMSUBMIT_AJAX_ENDPOINT = "https://formsubmit.co/ajax/tntcraftglobal@gmail.com";
+const pipelineForm = document.getElementById('pipeline-form');
+const formResponse = document.getElementById('form-response');
+const submitBtn = document.getElementById('submit-btn');
+
+pipelineForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // Re-validate email before allowing dispatch (extra safety on top of native HTML5 check)
+  const emailOk = validateClientEmail ? validateClientEmail() : isValidEmail(clientEmailInput.value);
+  if (!emailOk) {
+    formResponse.classList.remove('hidden');
+    formResponse.innerText = "Please enter a valid corporate email ID before submitting.";
+    formResponse.className = "mt-4 text-center text-sm font-bold text-red-600";
+    clientEmailInput.focus();
+    return;
+  }
+
+  // Merge phone country code with the phone number for a clean, complete number in the email
+  const fullPhone = `${phoneCountryCode.value} ${document.getElementById('client_phone').value}`.trim();
+
+  formResponse.classList.remove('hidden');
+  formResponse.innerText = "Processing pipeline request...";
+  formResponse.className = "mt-4 text-center text-sm font-bold text-amber-600";
+  submitBtn.disabled = true;
+
+  try {
+    const formData = new FormData(pipelineForm);
+    formData.set('client_phone', fullPhone);
+
+    const response = await fetch(FORMSUBMIT_AJAX_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: formData
+    });
+
+    if (response.ok) {
+      formResponse.innerText = "Success! Pipeline configured. Requirement dispatched to operations desk.";
+      formResponse.className = "mt-4 text-center text-sm font-bold text-green-600";
+      pipelineForm.reset();
+      phoneCountryCode.value = "+1";
+      clientEmailInput.classList.remove('input-valid', 'input-invalid');
+      runDynamicCalculation();
+    } else {
+      throw new Error();
+    }
+  } catch (err) {
+    formResponse.innerText = "Network Error! Could not reach the mail dispatch service. Please verify your connection and try again.";
+    formResponse.className = "mt-4 text-center text-sm font-bold text-red-600";
+  } finally {
+    submitBtn.disabled = false;
+  }
+});
+
+// Quick Contact Dispatch Form Binding Loop
+const quickForm = document.getElementById('quick-contact-form');
+const quickResponse = document.getElementById('quick-response');
+
+quickForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const emailOk = validateQuickEmail ? validateQuickEmail() : isValidEmail(quickEmailInput.value);
+  if (!emailOk) {
+    quickResponse.classList.remove('hidden');
+    quickResponse.innerText = "Please enter a valid email address before sending.";
+    quickResponse.className = "mt-2 text-sm font-bold text-red-600";
+    quickEmailInput.focus();
+    return;
+  }
+
+  quickResponse.classList.remove('hidden');
+  quickResponse.innerText = "Dispatching fast transmission line...";
+  quickResponse.className = "mt-2 text-sm font-bold text-amber-600";
+
+  try {
+    const formData = new FormData(quickForm);
+    const response = await fetch(FORMSUBMIT_AJAX_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: formData
+    });
+    if (response.ok) {
+      quickResponse.innerText = "Line dispatched successfully!";
+      quickResponse.className = "mt-2 text-sm font-bold text-green-600";
+      quickForm.reset();
+      quickEmailInput.classList.remove('input-valid', 'input-invalid');
+    } else { throw new Error(); }
+  } catch(e) {
+    quickResponse.innerText = "Transmission down. Mail dispatch service unreachable.";
+    quickResponse.className = "mt-2 text-sm font-bold text-red-600";
+  }
+});
+
+// DOM Initialization Boot Setup
+window.addEventListener('DOMContentLoaded', () => {
+  updatePricingGridCards();
+  runDynamicCalculation();
+});
+</script>
+</body>
+</html>
