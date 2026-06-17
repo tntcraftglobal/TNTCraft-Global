@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNTCraft Global | Core Portfolio Asset Vault</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .heading-font { font-family: 'Syne', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Asset Aspect Ratio Constraint Engine */
+        .portfolio-img-container {
+            position: relative;
+            width: 100%;
+            height: 260px; /* Fixed height across all grids */
+            overflow: hidden;
+            background-color: #1e293b;
+        }
+
+        /* Smooth Zoom Transition for Images */
+        .portfolio-img-container img {
+            transition: transform 0.5s ease, filter 0.5s ease;
+            transform-origin: center center;
+        }
+
+        /* Hover State: Zoom and Clear effect */
+        .bg-slate-900:hover .portfolio-img-container img {
+            transform: scale(1.12); /* 12% Zoom inside the frame */
+            filter: brightness(1.05) contrast(1.05); /* Enhances clarity on hover */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="py-12">
+
+    <header class="max-w-7xl mx-auto px-6 text-center mb-16">
+        <span class="px-4 py-1.5 rounded-full border border-slate-800 bg-slate-900 text-indigo-400 text-xs uppercase tracking-widest font-mono font-bold mb-4 inline-block shadow-sm">
+            // HISTORICAL PRODUCTION ENTRIES
+        </span>
+        <h1 class="heading-font text-4xl md:text-6xl font-black mt-2">Our High-End <span class="gradient-text">Asset Portfolio</span></h1>
+        <p class="text-slate-400 text-sm md:text-base max-w-2xl mx-auto mt-4 font-normal leading-relaxed">
+            Examine our 15 synchronized structural asset tiers across high-performance cross-border corridors.
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 space-y-20">
+        
+        <div id="graphic-design-cluster">
+            <h2 class="heading-font text-2xl font-extrabold text-white border-b border-slate-800 pb-3 flex items-center gap-2 mb-8">
+                <i class="fa-solid fa-palette text-blue-400"></i> 1. Premium Graphic Design Assets <span class="text-xs font-mono text-slate-500 font-normal">(5 Deliverables)</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images/corporatecatalog.jpg.jpeg" alt="Corporate Catalog System" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">Corporate Catalog System</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Multi-layered corporate catalog print vectors engineered for international machinery operations data lines.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images/packingimage.jpg.jpeg" alt="Premium Packaging Structure" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">Premium Packaging Structure</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">High-density luxury retail box blueprints utilizing standardized commercial printing profiles.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images/enterprisevector.jpg.jpeg" alt="Enterprise Vector Infographics" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">Enterprise Vector Infographics</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Complex analytical mapping layouts optimized for boardroom metrics transmission displays.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images/bespokebrochure.jpg.jpeg" alt="Bespoke Print Brochure Layout" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">Bespoke Print Brochure Layout</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">A4 dimensioned dual-fold premium vector brochure line curated for high-end conversion assets.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images/globaloperations.jpg.jpeg" alt="Global Operations Annual Vector" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">Global Operations Annual Blueprint</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Complex layout visualization matrix engineered for tech enterprise structural reports.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="social-media-cluster">
+            <h2 class="heading-font text-2xl font-extrabold text-white border-b border-slate-800 pb-3 flex items-center gap-2 mb-8">
+                <i class="fa-solid fa-share-nodes text-purple-400"></i> 2. Social Media Grid Infrastructure <span class="text-xs font-mono text-slate-500 font-normal">(5 Deliverables)</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images/performanceAdgrid.jpg.jpeg" alt="High-Performance Ad Grid" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">High-Performance Ad Grid</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">High-conversion square campaign canvas engineered to accelerate customer acquisition flows.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images/strategiccarousel.jpg.jpeg" alt="Strategic Carousel Vector Sequence" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">Strategic Carousel Matrix</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Integrated multi-slide slide array compiled perfectly for educational retention loops.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images/productrolloutbanner.jpg.jpeg" alt="Product Rollout Banner Set" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">Product Rollout Banner Set</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Symmetrical color schemas tailored perfectly for instantaneous cross-border tech item releases.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images/fintechengagement.jpg.jpeg" alt="Fintech Engagement Typography Grid" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">Fintech Engagement Typography</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Bold corporate vector layouts engineered to secure instant trust validation indices.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images\globalevents.jpg.jpeg" alt="Event Transmission Promo Layer" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">Global Event Transmission Layer</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">High-fidelity overlay design system configured for digital summits and live corporate streams.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="logo-design-cluster">
+            <h2 class="heading-font text-2xl font-extrabold text-white border-b border-slate-800 pb-3 flex items-center gap-2 mb-8">
+                <i class="fa-solid fa-bezier-curve text-indigo-400"></i> 3. Logo & Brand Core Marks <span class="text-xs font-mono text-slate-500 font-normal">(3 Deliverables)</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images\minimalmonogram.jpg.jpeg" alt="Minimalist Geometric Monogram" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">Minimal Geometric Monogram</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">High-precision math vectors engineered for elite corporate software firms.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images\saasenterprises.jpg.jpeg" alt="SaaS Enterprise Wordmark" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">SaaS Enterprise Wordmark</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Custom kerning layouts optimized for readability inside cloud storage infrastructure models.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container">
+                        <img src="images\abstractidentity.jpg.jpeg" alt="Abstract Identity Emblem" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="heading-font font-bold text-lg text-white">Abstract Identity Emblem</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Multi-dimensional symbolic design system built for venture capital corridors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="uiux-design-cluster" class="pb-12">
+            <h2 class="heading-font text-2xl font-extrabold text-white border-b border-slate-800 pb-3 flex items-center gap-2 mb-8">
+                <i class="fa-solid fa-compass-drafting text-pink-400"></i> 4. Premium UI/UX Figma Frameworks <span class="text-xs font-mono text-slate-500 font-normal">(2 Deliverables)</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container !h-[340px]"> <img src="images\uiuxfintech.jpg.jpeg" alt="Fintech Executive Dashboard" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="heading-font font-bold text-xl text-white">Fintech Executive Dashboard</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Intricate operational data component trees, reactive widget structures, and native dark-mode palettes mapped entirely inside Figma design layers.</p>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="portfolio-img-container !h-[340px]">
+                        <img src="images\globalb2buiux.jpg.jpeg" alt="Global B2B E-Commerce System" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="heading-font font-bold text-xl text-white">Global B2B E-Commerce System</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">Responsive transactional layout blueprints crafted specifically for frictionless checkout operations across global commerce corridors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-center mt-12 border-t border-slate-800 pt-8 text-xs text-slate-500 font-mono tracking-wider">
+        <p>© 2026 TNTCraft Global. Structural Portfolio Grid Adhered to Absolute Specs.</p>
+    </footer>
+
+</body>
+</html>
