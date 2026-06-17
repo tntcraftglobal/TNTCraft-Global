@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNTCraft Global | Structural Operations Legal Gateway</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+        .heading-font { font-family: 'Syne', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="py-16">
+
+    <div class="max-w-4xl mx-auto px-6">
+        
+        <div class="text-center mb-12">
+            <h1 class="heading-font text-3xl md:text-5xl font-black"><span class="gradient-text">Operations Governance</span> Framework</h1>
+            <p class="text-slate-400 text-xs font-mono tracking-widest uppercase mt-2">Technative Technologies Legal Compliance Desk</p>
+        </div>
+
+        <div class="flex border-b border-slate-800 mb-8 max-w-md mx-auto justify-center gap-4">
+            <button id="privacy-btn" class="px-6 py-3 heading-font font-bold text-sm tracking-wide border-b-2 border-indigo-500 text-white focus:outline-none transition-all cursor-pointer">
+                Privacy Policy
+            </button>
+            <button id="terms-btn" class="px-6 py-3 heading-font font-bold text-sm tracking-wide border-b-2 border-transparent text-slate-400 hover:text-white focus:outline-none transition-all cursor-pointer">
+                Terms & Conditions
+            </button>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl leading-relaxed text-sm text-slate-300 space-y-6">
+            
+            <div id="privacy-content" class="space-y-6">
+                <h2 class="heading-font text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-indigo-400"></i> Global Data Privacy Protection Regulation Matrix
+                </h2>
+                <p class="text-xs text-slate-400 font-mono">Last Document Review: June 2026</p>
+                <p>
+                    At TNTCraft Global, a wholly-owned subsidiary enterprise of <strong>Technative Technologies</strong>, we process transaction parameters and digital asset scopes under absolute security vectors.
+                </p>
+                <h3 class="heading-font text-sm font-bold text-white mt-4 uppercase tracking-wider">1. Structural Ingestion of Customer Metrics</h3>
+                <p>
+                    We collect corporate identity tags, authorized phone endpoints, enterprise emails, and reference folder source lines (including Google Drive and Figma nodes) purely to run custom asset pipeline computations.
+                </p>
+                <h3 class="heading-font text-sm font-bold text-white mt-4 uppercase tracking-wider">2. Cryptographic Guardrails</h3>
+                <p>
+                    Sall dataset values are strictly preserved via premium Hostinger hosting frameworks and enterprise SSL communication keys. No analytical tracking entries are ever leased to cross-border networks.
+                </p>
+            </div>
+
+            <div id="terms-content" class="space-y-6 hidden">
+                <h2 class="heading-font text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-file-contract text-blue-400"></i> Terms of Cross-Border Production Operations
+                </h2>
+                <p class="text-xs text-slate-400 font-mono">Last Document Review: June 2026</p>
+                <p>
+                    These terms govern the processing architecture of automated production deliveries configured through the unified local currency selector.
+                </p>
+                <h3 class="heading-font text-sm font-bold text-white mt-4 uppercase tracking-wider">1. Level Rate Calculation Authority</h3>
+                <p>
+                    Flat subscription anchors are defined strictly inside our native absolute USD matrices ($36, $60, $96, $120, $180). Multi-currency currency indices are dynamically tracked across regional financial tunnels based on the chosen tier.
+                </p>
+                <h3 class="heading-font text-sm font-bold text-white mt-4 uppercase tracking-wider">2. Deliverable Finalization SLA</h3>
+                <p>
+                    Level 5 configurations gain direct priority routing to senior Art Directors with immediate 24-hour urgent completion protocols. Custom web development architecture requests bypass local calculations and are routed to manual enterprise engineering desks.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-8">
+            <a href="index.html" class="text-xs font-mono text-slate-500 hover:text-indigo-400 transition-colors"><i class="fa-solid fa-arrow-left-long"></i> Return to Main Production Hub</a>
+        </div>
+    </div>
+
+    <script>
+        const privacyBtn = document.getElementById('privacy-btn');
+        const termsBtn = document.getElementById('terms-btn');
+        const privacyContent = document.getElementById('privacy-content');
+        const termsContent = document.getElementById('terms-content');
+
+        function toggleTabs(target) {
+            if(target === 'privacy') {
+                privacyContent.classList.remove('hidden');
+                termsContent.classList.add('hidden');
+                privacyBtn.className = "px-6 py-3 heading-font font-bold text-sm tracking-wide border-b-2 border-indigo-500 text-white focus:outline-none transition-all cursor-pointer";
+                termsBtn.className = "px-6 py-3 heading-font font-bold text-sm tracking-wide border-b-2 border-transparent text-slate-400 hover:text-white focus:outline-none transition-all cursor-pointer";
+            } else {
+                privacyContent.classList.add('hidden');
+                termsContent.classList.remove('hidden');
+                termsBtn.className = "px-6 py-3 heading-font font-bold text-sm tracking-wide border-b-2 border-blue-500 text-white focus:outline-none transition-all cursor-pointer";
+                privacyBtn.className = "px-6 py-3 heading-font font-bold text-sm tracking-wide border-b-2 border-transparent text-slate-400 hover:text-white focus:outline-none transition-all cursor-pointer";
+            }
+        }
+
+        privacyBtn.addEventListener('click', () => toggleTabs('privacy'));
+        termsBtn.addEventListener('click', () => toggleTabs('terms'));
+
+        // URL parsing to auto-switch if clicked from footer links smoothly
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const activeTab = urlParams.get('tab');
+            if(activeTab === 'terms') { toggleTabs('terms'); }
+        });
+    </script>
+</body>
+</html>
